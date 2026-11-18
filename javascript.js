@@ -6,10 +6,15 @@ fetch("questions.json")
     let questions = data.questions;
     let ql = questions.length;
     let lang = data.language;
+    score = 100 - ql;
 
     async function index() {
         document.getElementById("ti").innerHTML = `Programing Test of ${lang}`;
         document.getElementById("ti2").innerHTML = `Programing Test of ${lang}`;
+        if(ql > 100){
+            alert("Please reduce the number of questions to less than 100.");
+            return;
+        }
         for (let i = 0; i < ql; i++) {
             document.getElementById("qt").innerHTML = `Question ${questions[i].id} / ${ql}: <br> ${questions[i].question}`;
 
@@ -22,7 +27,13 @@ fetch("questions.json")
                     document.getElementById("b").onclick = resolve;
                 });
 
-                if (/^[1-4]$/.test(document.getElementById("t").value.trim())) break;
+                if (!/^[1-4]$/.test(document.getElementById("t").value.trim())){
+                    alert("Please enter a number between 1 and 4.");
+                }
+                else{
+                    break;
+                }
+
             }
 
             if (Number(document.getElementById("t").value.trim()) - 1 === questions[i].answer) score++;
@@ -41,7 +52,7 @@ fetch("questions.json")
 
         document.getElementById("t").style.display = "none";
         document.getElementById("b").style.display = "none";
-        document.getElementById("qt").innerHTML = `Your score: ${score} / ${ql}`;
+        document.getElementById("qt").innerHTML = `Your score: ${score} / 100`;
     }
 
     index();
