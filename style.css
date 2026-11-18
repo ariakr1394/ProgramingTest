@@ -1,0 +1,165 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #2b2b2b;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #080808;
+    border: 2px solid #9b5cff;
+    border-top: none;
+    border-radius: 0 0 18px 18px;
+    padding: 18px;
+    z-index: 1000;
+}
+
+
+main {
+    padding: 110px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer {
+    background-color: #080808;
+    border-top: 2px solid #9b5cff;
+    padding: 20px;
+    margin-top: 150px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+input,
+textarea {
+    display: inline-block;
+    vertical-align: middle;
+
+    background-color: #080808;
+    color: white;
+
+    border: 2px solid #9b5cff;
+    border-radius: 10px;
+
+    padding: 12px 15px;
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #c59aff;
+    box-shadow: 0 0 10px #9b5cff55;
+}
+
+button {
+    display: inline-block;
+    vertical-align: middle;
+
+    background-color: #b47aff;
+    color: #100820;
+
+    border: 2px solid #7135c9;
+    border-radius: 12px;
+
+    padding: 11px 24px;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        border-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+button:hover {
+    background-color: #c69aff;
+    border-color: #9255e8;
+    color: #200d35;
+
+    box-shadow: 0 0 12px #9b5cff66;
+
+    transform: translateY(3px);
+}
+
+button:active {
+    background-color: #d5b5ff;
+    border-color: #b47aff;
+    color: #2d1245;
+
+    box-shadow: 0 0 16px #b47aff88;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9b5cff;
+    border-radius: 10px;
+    border: 2px solid #080808;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #c69aff;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #9b5cff #080808;
+}
+
+a {
+    color: #b47aff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+a:hover {
+    color: #c69aff;
+}
+
+a:visited {
+    color: #b47aff;
+}
+
+.github-icon {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 0;
+    filter: invert(48%) sepia(75%) saturate(1200%)
+            hue-rotate(225deg) brightness(110%);
+    vertical-align: middle;
+}

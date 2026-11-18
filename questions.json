@@ -1,0 +1,171 @@
+{
+    "testlanguage": "English",
+    "language": "Python",
+    "questions": [
+        {
+            "id": 1,
+            "question": "How do you create a variable in Python?",
+            "options": [
+                "var x = 10",
+                "let x = 10",
+                "x = 10",
+                "int x = 10"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 2,
+            "question": "How do you print text in Python?",
+            "options": [
+                "print('Hello')",
+                "echo('Hello')",
+                "console.log('Hello')",
+                "write('Hello')"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 3,
+            "question": "How do you get input from the user?",
+            "options": [
+                "get()",
+                "input()",
+                "read()",
+                "scan()"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 4,
+            "question": "How do you write a single-line comment?",
+            "options": [
+                "// Comment",
+                "/* Comment */",
+                "# Comment",
+                "-- Comment"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 5,
+            "question": "How do you define a function?",
+            "options": [
+                "function my_func():",
+                "def my_func():",
+                "func my_func():",
+                "create my_func():"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 6,
+            "question": "How do you create a list?",
+            "options": [
+                "my_list = (1, 2, 3)",
+                "my_list = {1, 2, 3}",
+                "my_list = [1, 2, 3]",
+                "my_list = <1, 2, 3>"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 7,
+            "question": "How do you check if x is equal to 10?",
+            "options": [
+                "if x = 10:",
+                "if x == 10:",
+                "if x === 10:",
+                "if x equals 10:"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 8,
+            "question": "How do you start a for loop?",
+            "options": [
+                "for i in range(5):",
+                "loop i from 5:",
+                "for (i = 0; i < 5; i++):",
+                "repeat(5):"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 9,
+            "question": "How do you find the length of a string?",
+            "options": [
+                "length('Hello')",
+                "size('Hello')",
+                "len('Hello')",
+                "count('Hello')"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 10,
+            "question": "How do you convert a string to an integer?",
+            "options": [
+                "str()",
+                "int()",
+                "float()",
+                "number()"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 11,
+            "question": "How do you add an item to the end of a list?",
+            "options": [
+                "my_list.add(5)",
+                "my_list.push(5)",
+                "my_list.append(5)",
+                "my_list.insert_end(5)"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 12,
+            "question": "How do you import the math module?",
+            "options": [
+                "include math",
+                "import math",
+                "using math",
+                "load math"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 13,
+            "question": "How do you create a dictionary?",
+            "options": [
+                "my_dict = [\"name\", \"Aria\"]",
+                "my_dict = (\"name\", \"Aria\")",
+                "my_dict = {\"name\": \"Aria\"}",
+                "my_dict = <\"name\": \"Aria\">"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 14,
+            "question": "How do you handle an exception?",
+            "options": [
+                "try and except",
+                "if and else",
+                "for and while",
+                "print and input"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 15,
+            "question": "How do you create a class?",
+            "options": [
+                "object MyClass:",
+                "new MyClass:",
+                "class MyClass:",
+                "create MyClass:"
+            ],
+            "answer": 2
+        }
+    ]
+}
