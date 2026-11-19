@@ -8,6 +8,13 @@ fetch("questions.json")
     let lang = data.language;
     score = 100 - ql;
 
+    document.getElementById("t").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            document.getElementById("b").click();
+        }
+    });
+
     async function index() {
         document.getElementById("ti").innerHTML = `Programing Test of ${lang}`;
         document.getElementById("ti2").innerHTML = `Programing Test of ${lang}`;
@@ -25,6 +32,7 @@ fetch("questions.json")
             if(i == ql - 1){
                 document.getElementById("b").innerHTML = "Show Score";
             }
+            
 
             while (true) {
                 await new Promise(resolve => {
