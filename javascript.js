@@ -22,6 +22,10 @@ fetch("questions.json")
                 document.getElementById(`l${j + 1}`).innerHTML = questions[i].options[j];
             }
 
+            if(i == ql - 1){
+                document.getElementById("b").innerHTML = "Show Score";
+            }
+
             while (true) {
                 await new Promise(resolve => {
                     document.getElementById("b").onclick = resolve;
@@ -39,6 +43,7 @@ fetch("questions.json")
             if (Number(document.getElementById("t").value.trim()) - 1 === questions[i].answer) score++;
 
             document.getElementById("t").value = "";
+
         }
 
         for (let i = 1; i <= 4; i++) {
