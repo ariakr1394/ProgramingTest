@@ -1,4 +1,6 @@
 let score = 0;
+let s = 0;
+let wronganswers = [];
 
 fetch("questions.json")
 .then(response => response.json())
@@ -6,7 +8,6 @@ fetch("questions.json")
     let questions = data.questions;
     let ql = questions.length;
     let lang = data.language;
-    score = 100 - ql;
 
     document.getElementById("t").addEventListener("keydown", function(event) {
         if (event.key === "Enter") {
@@ -48,7 +49,19 @@ fetch("questions.json")
 
             }
 
-            if (Number(document.getElementById("t").value.trim()) - 1 === questions[i].answer) score++;
+            if (Number(document.getElementById("t").value.trim()) - 1 === questions[i].answer){
+                score = score + (100 / ql);
+                s = s + 1;
+            } 
+            else {
+                let selected = Number(document.getElementById("t").value) - 1;
+
+                wronganswers.push({
+                    question: questions[i].question,
+                    correct: questions[i].options[questions[i].answer],
+                    user: questions[i].options[selected]
+                });
+            }
 
             document.getElementById("t").value = "";
 
@@ -65,7 +78,33 @@ fetch("questions.json")
 
         document.getElementById("t").style.display = "none";
         document.getElementById("b").style.display = "none";
-        document.getElementById("qt").innerHTML = `Your score: ${score} / 100`;
+        if(score >= 60){
+            document.getElementById("qt").innerHTML = `<p style="color: green;">Your Score: ${score} / 100 <br> You Win!</p>`;
+        }
+        else{
+            document.getElementById("qt").innerHTML = `<p style="color: red;">Your Score: ${score} / 100 <br> You Lost</p>`;
+        }
+
+        let v = "";
+        for (let i = 0; i < wronganswers.length; i++) {
+            v += `
+            <div>
+            <hr>
+            <h3>${i + 1}. ${wronganswers[i].question}</h3>
+
+            <h3 style="color: red;">
+                Your Answer: ${wronganswers[i].user}
+            </h3>
+
+            <h3 style="color: green;">
+                Correct Answer: ${wronganswers[i].correct}
+            </h3>
+            </div>
+            `;
+        }
+
+        document.getElementById("w1").style.display = "block";
+        document.getElementById("w2").innerHTML = v;
     }
 
     index();
