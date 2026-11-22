@@ -1,3 +1,4 @@
+
 {
     "testlanguage": "English",
     "language": "Python",
@@ -164,6 +165,61 @@
                 "new MyClass:",
                 "class MyClass:",
                 "create MyClass:"
+            ],
+            "answer": 2
+        },
+        {
+            "id": 16,
+            "question": "How do you create a tuple in Python?",
+            "options": [
+                "my_tuple = [1, 2, 3]",
+                "my_tuple = (1, 2, 3)",
+                "my_tuple = {1, 2, 3}",
+                "my_tuple = <1, 2, 3>"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 17,
+            "question": "How do you remove an item from a list by value?",
+            "options": [
+                "my_list.delete(5)",
+                "my_list.remove(5)",
+                "my_list.pop_value(5)",
+                "my_list.erase(5)"
+            ],
+            "answer": 1
+        },
+        {
+            "id": 18,
+            "question": "How do you check the data type of a variable?",
+            "options": [
+                "type(x)",
+                "typeof(x)",
+                "datatype(x)",
+                "checktype(x)"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 19,
+            "question": "How do you create a while loop?",
+            "options": [
+                "while x < 10:",
+                "loop while x < 10:",
+                "while (x < 10) {}",
+                "repeat while x < 10:"
+            ],
+            "answer": 0
+        },
+        {
+            "id": 20,
+            "question": "How do you open a file in Python?",
+            "options": [
+                "file.open('test.txt')",
+                "read('test.txt')",
+                "open('test.txt')",
+                "file('test.txt')"
             ],
             "answer": 2
         }
